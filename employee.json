@@ -1,0 +1,21 @@
+[
+    {
+      "EmployeeId": 123,
+      "FirstName": "john",
+      "LastName": "doe",
+      "Salary": 50000
+    },
+    {
+      "EmployeeId": 456,
+      "FirstName": "jane",
+      "LastName": "smith",
+      "Salary": 60000
+    },
+    {
+      "EmployeeId": 789,
+      "FirstName": "alice",
+      "LastName": "jones",
+      "Salary": 55000
+    }
+  ]
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+</head>
+<body>
+
+    <button id="data">Click here to get student data</button>
+    <table id="stutab">
+
+    </table>
+    <script>
+const jsondata={
+    "student":[
+        {"name": "Bhavana", "age": 20, "college": "KMIT", "year": 3, "sem": 1 },
+        {"name": "Ram", "age": 21, "college": "JNTU", "year": 4,"sem": 2 },
+        {"name": "John", "age": 26, "college": "KMEC", "year": 1,"sem": 1},
+        {"name": "Reena", "age": 19, "college": "NGIT", "year": 3,"sem": 1 }
+    ]
+}
+const btn=document.getElementById("data");
+btn.addEventListener("click",()=>{
+const stutab=document.getElementById("stutab");
+jsondata.student.forEach((st)=>{
+    const newrow=document.createElement("tr");
+    const namedata=document.createElement("td");
+    namedata.innerHTML=st.name;
+    const agedata=document.createElement("td");
+    agedata.innerHTML=st.age;
+    const coldata=document.createElement("td");
+    coldata.innerHTML=st.college;
+    const yeardata=document.createElement("td");
+    yeardata.innerHTML=st.year;
+    const semdata=document.createElement("td");
+    semdata.innerHTML=st.sem;
+    newrow.appendChild(namedata);
+    newrow.appendChild(agedata);
+    newrow.appendChild(coldata);
+    newrow.appendChild(yeardata);
+    newrow.appendChild(semdata);
+
+    stutab.appendChild(newrow);
+})
+})
+
+       
+    </script>
+    
+</body>
+</html>
